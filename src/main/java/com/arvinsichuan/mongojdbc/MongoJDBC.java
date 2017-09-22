@@ -26,6 +26,8 @@ import static com.mongodb.client.model.Filters.eq;
  */
 public class MongoJDBC {
     public static void main(String[] args) {
+        System.out.println("Input Pass");
+
         Scanner scanner=new Scanner(System.in);
         MongoClientURI uri = new MongoClientURI(
                 "mongodb://Dawn:"+scanner.next()+"@cluster0-shard-00-00-rwqvv.mongodb.net:27017," +
