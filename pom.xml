@@ -106,6 +106,13 @@
             <version>5.15.0</version>
         </dependency>
 
+        <!--mongodb support-->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver</artifactId>
+            <version>3.5.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>
