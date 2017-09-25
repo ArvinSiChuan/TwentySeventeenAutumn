@@ -6,11 +6,15 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c"
+           uri="http://www.springframework.org/tags" %>
 <html>
 <head>
     <title>Hello</title>
 </head>
 <body>
-Hello, Idea. This is a dispached page.
+<p>Hello. This is a dispached page.You are at Server 2</p>
+<p>Your session id: ${pageContext.session.id},${Name}</p>
+
 </body>
 </html>

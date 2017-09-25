@@ -6,7 +6,7 @@
     
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:applicationContext.xml;classpath:dispatcherServlet.xml;classpath:springSecurity.xml</param-value>
+        <param-value>classpath:applicationContext.xml;classpath:dispatcherServlet.xml;classpath:springSecurity.xml;classpath:springSession.xml</param-value>
     </context-param>
 
     <welcome-file-list>
@@ -37,5 +37,20 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
+
+    <filter>
+        <filter-name>springSessionRepositoryFilter</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:springSession.xml</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>springSessionRepositoryFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>ERROR</dispatcher>
+    </filter-mapping>
 
 </web-app>

@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Java EE Experiment 2017 Autum" target="1.5" />
+      <module name="Java EE Experiment 2017 Autum" target="9" />
     </bytecodeTargetLevel>
   </component>
 </project>
